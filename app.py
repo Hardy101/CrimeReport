@@ -17,11 +17,9 @@ User = UserModel(db=db)
 Report = ReportModel(db, app)
 
 
-# This routes specifies http methods
 @app.route('/api/issues', methods=['POST'])
 def report_issue():
     data = request.form
-    
     name = data.get('name')
     victim_name = data.get('victim_name')
     contact = data.get('contact')
@@ -29,9 +27,11 @@ def report_issue():
     state = data.get('state')
     district = data.get('district')
     block = data.get('block')
-    location = get_user_location()
     issue_type = data.get('issue_type')
+    # Get user's location
+    location = get_user_location()
 
+    # Create a dictionary for issue
     issue = {
         'name': name,
         'victim_name': victim_name,
@@ -48,16 +48,16 @@ def report_issue():
     
     db.session.add(new_issue)
 
-    user_email = current_user.email
-    user = User.query.filter_by(email=user_email).first()
-    send_email('eseoseordia@gmail.com', issue)
-    if user:
+    user = current_user
+    if user.is_authenticated:
         user.point += 1
+    
+    send_email('eseoseordia@gmail.com', issue)
 
     db.session.commit()
     
     # Return a success response
-    return jsonify({'message': 'Issue created successfully'}), 201  # 201 Created status code
+    return jsonify({'message': 'Issue created successfully'}), 201
 
 
 @app.route('/register', methods=['GET', 'POST'])
