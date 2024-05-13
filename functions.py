@@ -76,17 +76,3 @@ def get_user_location(request):
         return location.latlng  # Returns a tuple (latitude, longitude)
     else:
         return None
-
-
-# issue = {
-#     'name': 'Petyr Baelish',
-#     'victim_name': 'Danielle',
-#     'contact': '21142',
-#     'address': '214 Kings Road',
-#     'state': 'Flee buttom',
-#     'district': 'King's landing',
-#     'block': 'Brothel Ext1',
-#     'location': 'Kings landing',
-#     'issue_type': 'Outlandish Play'
-# }
-# send_email('eseoseordia@gmail.com', issue)
