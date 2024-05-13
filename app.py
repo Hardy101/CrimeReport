@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_login import current_user, login_required
 from flask_sqlalchemy import SQLAlchemy
-from functions import UserModel, ReportModel, send_email
+from functions import UserModel, ReportModel, send_email, get_user_location
 
 
 app = Flask(__name__)
@@ -29,7 +29,7 @@ def report_issue():
     state = data.get('state')
     district = data.get('district')
     block = data.get('block')
-    location = 'here'
+    location = get_user_location()
     issue_type = data.get('issue_type')
 
     issue = {
