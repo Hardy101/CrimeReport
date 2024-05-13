@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 ### Reporting Issues
 
-Users can report issues by sending a POST request to the `/api/issues` endpoint from a form. They need to provide details such as their name, victim's name, contact information, address, state, district, block, location, and the type of issue. Upon successful reporting, the issue is stored in the database, and an email notification is sent.
+Users can report issues by sending a POST request to the `/API/issues` endpoint from a form. They need to provide details such as their name, victim's name, contact information, address, state, district, block, location, and the type of issue. The issue is stored in the database upon successful reporting, and an email notification is sent.
 See `functions.py` for input field names.
 
 ### User Registration
