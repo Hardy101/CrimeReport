@@ -114,7 +114,6 @@ def leadership():
     # returns a json [{'id', 'name', 'points'}]
 
 
-
 # This is an alternative to running the file from command line
 if __name__ == '__main__':
     app.run(debug=True)
