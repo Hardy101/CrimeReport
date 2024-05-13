@@ -4,7 +4,11 @@ This reporting system is a Flask-based web application designed to allow users t
 
 ## Getting Started
 
-**Installation**: Ensure you have Python installed on your system. You can install the required dependencies using `pip`:
+**Installation**: Ensure you have Python installed on your system. Then activate your virtual environment
+`    python -m venv venv
+   `
+
+    Then You can install the required dependencies using `pip`:
 
     ```
     pip install -r requirements.txt
