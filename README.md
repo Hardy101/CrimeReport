@@ -5,16 +5,16 @@ This reporting system is a Flask-based web application designed to allow users t
 ## Getting Started
 
 **Installation**: Ensure you have Python installed on your system. Then activate your virtual environment
+
 ```
 python -m venv venv
+```
 
-````
+Then You can install the required dependencies using `pip`:
 
- Then You can install the required dependencies using `pip`:
-
- ```
- pip install -r requirements.txt
- ```
+```
+pip install -r requirements.txt
+```
 
 **Setting Up the Database**: The Database automatically sets up when you run `app.py`
 
@@ -77,4 +77,7 @@ Click on: https://developers.google.com/gmail/api/quickstart/python to get start
 ## Running the Application
 
 To run the application, execute the `app.py` file using Python. Make sure to set up the database before running the application.
-````
+
+```
+
+```
