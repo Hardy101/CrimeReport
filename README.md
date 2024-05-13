@@ -57,9 +57,11 @@ Click on: https://developers.google.com/gmail/api/quickstart/python to get start
 ![Google cloud Project link](/readme/cloud_project.jpg)
 
 **Step 2**: Click on `Go to OAuth consent screen` and follow instructions
+
 ![Google cloud Project link](/readme/consent_screen.jpg)
 
 **Step 3**: Click on `Enable API` and follow instructions
+
 ![Google cloud Project link](/readme/enable_api.jpg)
 
 **Step 4**: Click on `Go to Credentials`, follow the instructions, download `credentials.json` and save in root directory.
