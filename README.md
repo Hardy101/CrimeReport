@@ -77,7 +77,3 @@ Click on: https://developers.google.com/gmail/api/quickstart/python to get start
 ## Running the Application
 
 To run the application, execute the `app.py` file using Python. Make sure to set up the database before running the application.
-
-```
-
-```
