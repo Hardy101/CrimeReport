@@ -1,7 +1,3 @@
-import geocoder
-import requests
-
-
 def User(db):
     class UserModel(db.Model):
         id = db.Column(db.Integer, primary_key=True)
@@ -70,8 +66,16 @@ def send_email(r_email, issue):
         message = None
 
 
-def location():
-    pass
+def get_user_location(request):
+    import geocoder
+    ip = request.remote_addr
+
+    location = geocoder.ip(ip)
+
+    if location.ok:
+        return location.latlng  # Returns a tuple (latitude, longitude)
+    else:
+        return None
 
 
 # issue = {

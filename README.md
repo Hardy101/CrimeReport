@@ -1,7 +1,9 @@
 # Reporting System Documentation
 
 This reporting system is a Flask-based web application designed to allow users to report various issues and incidents. This document provides an overview of the system's functionality and how to use it.
+
 ## Getting Started
+
 **Installation**: Ensure you have Python installed on your system. You can install the required dependencies using `pip`:
 
     ```
@@ -15,11 +17,12 @@ This reporting system is a Flask-based web application designed to allow users t
 `python app.py`
 
 **Accessing the Application**: Once the application is running, you can access it by opening a web browser and navigating to `http://localhost:5000`.
+
 ## Functionality
 
 ### Reporting Issues
 
-Users can report issues by sending a POST request to the `/api/issues` endpoint from a form. They need to provide details such as their name, victim's name, contact information, address, state, district, block, location, and the type of issue. Upon successful reporting, the issue is stored in the database, and an email notification is sent. 
+Users can report issues by sending a POST request to the `/api/issues` endpoint from a form. They need to provide details such as their name, victim's name, contact information, address, state, district, block, location, and the type of issue. Upon successful reporting, the issue is stored in the database, and an email notification is sent.
 See `functions.py` for input field names.
 
 ### User Registration
@@ -33,25 +36,34 @@ Registered users can log in by sending a POST request to the `/login` endpoint w
 ### Leadership Board
 
 The `/leadership` endpoint provides a list of users along with their IDs, names, and points. This allows users to view the leadership board and see the points earned by each user.
+
 ## Endpoints
 
 - **POST `/api/issues`**: Report an issue.
 - **POST `/register`**: Register a new user.
 - **POST `/login`**: Log in as an existing user.
 - **GET `/leadership`**: View the leadership board.
+
 ## Dependencies
 
-See `requirements.txt` 
+See `requirements.txt`
+
 ## Google Authentication
 
 Click on: https://developers.google.com/gmail/api/quickstart/python to get started
 
 **Step 1**: Click on `A Google cloud project` and follow instructions
+![Google cloud Project link](/readme/cloud project.jpg)
 
 **Step 2**: Click on `Go to OAuth consent screen` and follow instructions
+![Google cloud Project link](/readme/consent screen.jpg)
 
-**Step 2**: Click on `Go to Credentials`, follow the instructions, download `credentials.json` and save in root directory
+**Step 3**: Click on `Enable API` and follow instructions
+![Google cloud Project link](/readme/enable api.jpg)
+
+**Step 4**: Click on `Go to Credentials`, follow the instructions, download `credentials.json` and save in root directory
+![Google cloud Project link](/readme/credentials.jpg)
+
 ## Running the Application
 
 To run the application, execute the `app.py` file using Python. Make sure to set up the database before running the application.
-
