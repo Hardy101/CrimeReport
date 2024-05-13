@@ -52,7 +52,7 @@ def report_issue():
     if user.is_authenticated:
         user.point += 1
     
-    send_email('eseoseordia@gmail.com', issue)
+    send_email('<your_email_here />', issue)
 
     db.session.commit()
     
